@@ -37,36 +37,46 @@
 
         .logo { font-weight: 700; color: var(--dem-blue); text-decoration: none; font-size: 1.2rem; }
 
-        /* FIXED HERO BLOCK */
+        /* RE-ENGINEERED HERO SECTION */
         .hero {
             position: relative;
-            /* Combined background color and image for better browser compatibility */
-            background: var(--dem-blue) url('https://images.unsplash.com/photo-1595113702717-681331267400?q=80&w=1600') no-repeat center center;
-            background-size: cover;
             height: 500px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
-            overflow: hidden;
+            /* New reliable agricultural image source */
+            background-image: url('https://cdn.pixabay.com/photo/2016/10/25/11/49/cornfield-1768650_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--dem-blue); /* Fallback color */
         }
 
-        /* Stronger Blue Tint Overlay */
-        .hero::before {
+        /* Improved Blue Overlay */
+        .hero::after {
             content: "";
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 21, 188, 0.75); 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 21, 188, 0.75); /* Democratic Blue Tint */
             z-index: 1;
         }
 
-        .hero-content { position: relative; z-index: 2; padding: 0 20px; }
-        .hero h2 { font-size: 2.8rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+        .hero-content { 
+            position: relative; 
+            z-index: 2; 
+            padding: 0 20px; 
+        }
+
+        .hero h2 { font-size: 2.8rem; margin-bottom: 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; opacity: 1; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
 
         .section { padding: 80px 10%; }
-
         .chair-section { display: flex; align-items: center; gap: 50px; background: var(--white); }
         .chair-image { width: 300px; height: 300px; background: #eee; border-radius: 8px; object-fit: cover; border-bottom: 8px solid var(--dem-blue); }
 
@@ -108,7 +118,7 @@
     <img src="https://via.placeholder.com/300x300?text=Chair+Photo" alt="Party Chair" class="chair-image">
     <div>
         <h3 style="color: var(--dem-blue); margin-top: 0;">A Message from the Chair</h3>
-        <p>Welcome to the Tipton County Democratic Party. We believe that Tipton County is at its best when we work together to support our schools, protect our reproductive rights, and grow our local economy. Our party is built on the strength of neighbors helping neighbors, ensuring that every voice in Tipton, Sharpsville, and Kempton is heard.</p>
+        <p>Welcome to the Tipton County Democratic Party. We believe that Tipton County is at its best when we work together to support our schools, protect our reproductive rights, and grow our local economy.</p>
     </div>
 </section>
 
