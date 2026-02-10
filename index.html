@@ -142,3 +142,118 @@
             color: white;
             padding: 40px 10%;
             text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .disclaimer {
+            border: 1px solid white;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .chair-section { flex-direction: column; text-align: center; }
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">TIPTON COUNTY DEMOCRATS</a>
+    <a href="#join" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Join Us</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Building a Better, Brighter Tipton County</h2>
+        <p>Standing together for our families, our farmers, and our future.</p>
+    </div>
+</section>
+
+<section class="section chair-section">
+    <img src="https://via.placeholder.com/300x300?text=Chair+Photo" alt="Party Chair" class="chair-image">
+    <div>
+        <h3 style="color: var(--dem-blue); margin-top: 0;">A Message from the Chair</h3>
+        <p>Welcome to the Tipton County Democratic Party. We believe that Tipton County is at its best when we work together to support our schools, protect our reproductive rights, and grow our local economy. Our party is built on the strength of neighbors helping neighbors, ensuring that every voice in Tipton, Sharpsville, and Kempton is heard.</p>
+        <p><strong>Join us as we work to turn Tipton County blue!</strong></p>
+    </div>
+</section>
+
+<section class="section" style="background: var(--bg-gray);">
+    <h2 style="text-align: center;">Our Priorities</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Quality Education</h3>
+            <p>Supporting our teachers and students to ensure a world-class education for every child.</p>
+        </div>
+        <div class="card">
+            <h3>Healthy Communities</h3>
+            <p>Expanding access to affordable healthcare and protecting essential freedoms for all.</p>
+        </div>
+        <div class="card">
+            <h3>Economic Growth</h3>
+            <p>Investing in our local workforce and supporting the small businesses that power Tipton.</p>
+        </div>
+    </div>
+</section>
+
+<section id="candidates" class="section">
+    <h2 style="text-align: center; margin-bottom: 10px;">Meet Our 2026 Candidates</h2>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 40px; opacity: 0.8;">
+        The leaders working to bring transparency, integrity, and progress to Tipton County.
+    </p>
+    
+    <div class="grid">
+        <div class="card" style="border-top: 5px solid #ff4d4d;">
+            <div style="width: 120px; height: 120px; background: #eee; border-radius: 50%; margin: 0 auto 20px; overflow: hidden;">
+                <img src="https://via.placeholder.com/150?text=Matt+Terry" alt="Matt Terry" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="margin-bottom: 5px;">Matt Terry</h3>
+            <p style="color: var(--dem-blue); font-weight: 700; margin-top: 0;">Tipton County Council</p>
+            <p style="font-size: 0.95rem;">An engineering leader and community advocate focused on smart infrastructure and transparent local government. Matt is dedicated to ensuring Tipton County remains a place where families can thrive.</p>
+            <a href="mailto:info@tiptondems.org" class="btn" style="padding: 10px 20px; font-size: 0.8rem; margin-top: 15px;">Contact Campaign</a>
+        </div>
+
+        <div class="card" style="border-top: 5px solid #ff4d4d;">
+            <div style="width: 120px; height: 120px; background: #eee; border-radius: 50%; margin: 0 auto 20px; overflow: hidden;">
+                <img src="https://via.placeholder.com/150?text=Jackson+Franklin" alt="Jackson Franklin" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="margin-bottom: 5px;">Jackson Franklin</h3>
+            <p style="color: var(--dem-blue); font-weight: 700; margin-top: 0;">U.S. Congress (IN-05)</p>
+            <p style="font-size: 0.95rem;">Fighting for economic opportunity and healthcare access across Indiana's 5th district. Jackson is committed to empowering working families through bold, common-sense leadership.</p>
+            <a href="https://jacksonfranklin.com" class="btn" style="padding: 10px 20px; font-size: 0.8rem; margin-top: 15px;">Visit Website</a>
+        </div>
+
+        <div class="card" style="border-top: 5px solid #ff4d4d; display: flex; align-items: center; justify-content: center; background: rgba(0,21,188,0.03);">
+            <div style="text-align: center;">
+                <h3 style="color: #666;">Your Name Here?</h3>
+                <p>Are you ready to lead your community? We are currently seeking candidates for local offices.</p>
+                <a href="mailto:info@tiptondems.org" style="color: var(--dem-blue); font-weight: bold; text-decoration: none;">Get in Touch &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section id="join" class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Sign up for our newsletter to receive the latest news, event invites, and volunteer opportunities.</p>
+    <div class="newsletter-form">
+        <form action="#" method="POST"> <input type="text" name="name" placeholder="Full Name" required style="width: 100%; margin-bottom: 10px;">
+            <input type="email" name="email" placeholder="Email Address" required style="width: 100%; margin-bottom: 10px;">
+            <button type="submit" class="btn" style="width: 100%;">Sign Up for Newsletter</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Tipton County Democratic Party</p>
+    <div class="disclaimer">
+        PAID FOR BY THE TIPTON COUNTY DEMOCRATIC CENTRAL COMMITTEE
+    </div>
+</footer>
+
+</body>
+</html>
