@@ -3,137 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipton County Democratic Party</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tipton County Democratic Party | Indiana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --dem-blue: #0015BC;
-            --light-blue: #E8F0FF;
-            --text-dark: #333333;
+            --accent-blue: #0044CC;
+            --bg-gray: #f8f9fa;
+            --white: #ffffff;
+            --text-main: #2d3436;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
-            padding: 0;
-            color: var(--text-dark);
+            color: var(--text-main);
+            background-color: var(--white);
             line-height: 1.6;
         }
 
-        header {
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--dem-blue);
-        }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
 
-        .hero {
-            background: linear-gradient(rgba(0, 21, 188, 0.05), rgba(0, 21, 188, 0.05)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80'); /* Scenic Indiana placeholder */
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        h1 { color: var(--dem-blue); margin-bottom: 10px; }
-        
-        .blurb {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .form-section {
-            background-color: var(--light-blue);
-            padding: 30px;
-            border-radius: 8px;
-        }
-
-        form {
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        input {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
+        .logo { font-weight: 700; color: var(--dem-blue); font-size: 1.4rem; text-decoration: none; }
 
-        button {
-            background-color: var(--dem-blue);
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 21, 188, 0.8), rgba(0, 21, 188, 0.8)), url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
             color: white;
-            padding: 15px;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+
+        /* Content Sections */
+        .section { padding: 60px 10%; }
+        .bg-light { background-color: var(--bg-gray); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--dem-blue);
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        /* Form Styling */
+        .newsletter-box {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .btn {
+            background: var(--dem-blue);
+            color: white;
+            padding: 12px 30px;
             border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            border-radius: 6px;
+            font-weight: 600;
             cursor: pointer;
             transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        button:hover {
-            background-color: #000e8c;
-        }
+        .btn:hover { background: var(--accent-blue); }
 
         footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 5%;
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            color: #666;
         }
 
         .disclaimer {
-            border: 1px solid #ccc;
+            border: 1px solid #555;
             display: inline-block;
-            padding: 5px 15px;
+            padding: 8px 20px;
             margin-top: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Tipton County Democrats</h1>
-</header>
-
-<div class="hero">
-    <div class="container">
-        <div class="blurb">
-            <p>We are the official Democratic Party of Tipton County, Indiana. We are committed to building a brighter, more equitable future for every neighbor in Tipton, Sharpsville, Kempton, and beyond.</p>
-            <p>Join us as we work together to support local candidates and advocate for progressive policies that strengthen our community.</p>
-        </div>
-
-        <div class="form-section">
-            <h3>Stay Updated</h3>
-            <p>Join our newsletter for local updates and volunteer opportunities.</p>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Join the Movement</button>
-            </form>
-        </div>
+<nav>
+    <a href="#" class="logo">TIPTON DEMS</a>
+    <div>
+        <button class="btn" style="padding: 8px 15px; font-size: 0.8rem;">Donate</button>
     </div>
-</div>
+</nav>
 
-<footer>
-    <p>&copy; 2026 Tipton County Democratic Party</p>
-    <div class="disclaimer">
-        Paid for by the Tipton County Democratic Central Committee
-    </div>
-</footer>
+<section class="hero">
+    <h2>Organizing for a Better Tipton County</h2>
+    <p>Empowering our community through data, transparency, and grassroots action. Together, we can build a future that works for everyone.</p>
+    <a href="#join" class="btn">Get Involved</a>
+</section>
 
-</body>
-</html>
+<section class="section">
+    <h2 style="text-align: center;">Our Priorities</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Local Empowerment</h3>
+            <p>We believe in giving every resident a voice in our county government, from Tipton to Sharpsville.</p>
+        </div>
+        <div class="card">
+            <h3>Data-Driven Growth</h3>
+            <p>Utilizing modern tools and transparent communication to solve local challenges and improve infrastructure.</p>
