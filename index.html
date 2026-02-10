@@ -14,90 +14,50 @@
             --text-dark: #1a1a1a;
         }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            color: var(--text-dark);
-            line-height: 1.7;
-        }
-
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: var(--text-dark); line-height: 1.7; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
 
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
+        /* Navigation */
+        nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo { font-weight: 700; color: var(--dem-blue); text-decoration: none; font-size: 1.2rem; }
 
-        /* RE-ENGINEERED HERO SECTION */
+        /* Hero */
         .hero {
-            position: relative;
-            height: 500px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            /* New reliable agricultural image source */
+            position: relative; height: 500px; width: 100%; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
             background-image: url('https://cdn.pixabay.com/photo/2016/10/25/11/49/cornfield-1768650_1280.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: var(--dem-blue); /* Fallback color */
+            background-size: cover; background-position: center; background-repeat: no-repeat; background-color: var(--dem-blue);
         }
-
-        /* Improved Blue Overlay */
-        .hero::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 21, 188, 0.75); /* Democratic Blue Tint */
-            z-index: 1;
-        }
-
-        .hero-content { 
-            position: relative; 
-            z-index: 2; 
-            padding: 0 20px; 
-        }
-
+        .hero::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 21, 188, 0.75); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; padding: 0 20px; }
         .hero h2 { font-size: 2.8rem; margin-bottom: 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; opacity: 1; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
 
         .section { padding: 80px 10%; }
+
+        /* Grayscale Image Logic */
+        .grayscale-img { filter: grayscale(100%); transition: filter 0.3s ease; object-fit: cover; }
+        .grayscale-img:hover { filter: grayscale(0%); }
+
         .chair-section { display: flex; align-items: center; gap: 50px; background: var(--white); }
-        .chair-image { width: 300px; height: 300px; background: #eee; border-radius: 8px; object-fit: cover; border-bottom: 8px solid var(--dem-blue); }
+        .chair-image { width: 300px; height: 400px; border-radius: 8px; border-bottom: 8px solid var(--dem-blue); }
 
+        /* Candidate Cards */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        .card { background: var(--bg-gray); padding: 30px; border-radius: 4px; text-align: center; border-top: 4px solid var(--dem-blue); transition: 0.3s; }
+        .card { background: var(--bg-gray); padding: 40px 30px; border-radius: 4px; text-align: center; border-top: 4px solid var(--dem-blue); transition: 0.3s; }
         .card:hover { transform: translateY(-5px); }
+        .candidate-img { width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; border: 4px solid var(--white); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
+        /* Newsletter */
         .newsletter { background: #111; color: white; padding: 80px 10%; text-align: center; }
         .newsletter-form { max-width: 500px; margin: 30px auto 0; }
         input { width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 4px; border: none; font-size: 1rem; }
-
         .btn { background: var(--dem-blue); color: white; padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 4px; border: none; cursor: pointer; transition: 0.3s; display: inline-block; }
         .btn:hover { background: var(--accent-blue); }
 
         footer { background: #000; color: white; padding: 40px 10%; text-align: center; font-size: 0.8rem; }
         .disclaimer { border: 1px solid white; padding: 10px 20px; display: inline-block; margin-top: 20px; font-weight: bold; }
 
-        @media (max-width: 768px) {
-            .chair-section { flex-direction: column; text-align: center; }
-            .hero h2 { font-size: 2rem; }
-        }
+        @media (max-width: 768px) { .chair-section { flex-direction: column; text-align: center; } .hero h2 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -115,10 +75,10 @@
 </section>
 
 <section class="section chair-section">
-    <img src="https://via.placeholder.com/300x300?text=Chair+Photo" alt="Party Chair" class="chair-image">
+    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Party Chair" class="chair-image grayscale-img">
     <div>
         <h3 style="color: var(--dem-blue); margin-top: 0;">A Message from the Chair</h3>
-        <p>Welcome to the Tipton County Democratic Party. We believe that Tipton County is at its best when we work together to support our schools, protect our reproductive rights, and grow our local economy.</p>
+        <p>Welcome to the Tipton County Democratic Party. We believe that Tipton County is at its best when we work together to support our schools, protect our reproductive rights, and grow our local economy. Our party is built on the strength of neighbors helping neighbors, ensuring that every voice in Tipton, Sharpsville, and Kempton is heard.</p>
     </div>
 </section>
 
@@ -126,47 +86,12 @@
     <h2 style="text-align: center;">Meet Our 2026 Candidates</h2>
     <div class="grid">
         <div class="card" style="border-top-color: #ff4d4d;">
-            <div style="width: 100px; height: 100px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; overflow: hidden;">
-                <img src="https://via.placeholder.com/150?text=Matt+Terry" alt="Matt Terry" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Matt Terry" class="candidate-img grayscale-img">
             <h3>Matt Terry</h3>
             <p style="color: var(--dem-blue); font-weight: 700;">Tipton County Council</p>
             <p>An engineering leader and community advocate dedicated to smart growth and transparent government.</p>
         </div>
         <div class="card" style="border-top-color: #ff4d4d;">
-            <div style="width: 100px; height: 100px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; overflow: hidden;">
-                <img src="https://via.placeholder.com/150?text=Jackson+Franklin" alt="Jackson Franklin" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Jackson Franklin" class="candidate-img grayscale-img">
             <h3>Jackson Franklin</h3>
-            <p style="color: var(--dem-blue); font-weight: 700;">U.S. Congress (IN-05)</p>
-            <p>Fighting for economic opportunity and healthcare access across Indiana's 5th district.</p>
-        </div>
-        <div class="card" style="border-top-color: #ff4d4d; border-style: dashed; background: transparent;">
-            <h3>Your Name Here?</h3>
-            <p>Interested in running for local office? We want to hear from you.</p>
-            <a href="mailto:info@tiptondems.org" style="color: var(--dem-blue); font-weight: bold;">Contact Us &rarr;</a>
-        </div>
-    </div>
-</section>
-
-<section id="join" class="newsletter">
-    <h2>Stay Updated</h2>
-    <p>Sign up for our newsletter to receive local updates and volunteer opportunities.</p>
-    <div class="newsletter-form">
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <button type="submit" class="btn" style="width: 100%;">Subscribe to Updates</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Tipton County Democratic Party</p>
-    <div class="disclaimer">
-        PAID FOR BY THE TIPTON COUNTY DEMOCRATIC CENTRAL COMMITTEE
-    </div>
-</footer>
-
-</body>
-</html>
+            <p style="color: var(--dem-blue); font-weight:
