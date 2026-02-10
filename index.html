@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipton County Democratic Party</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dem-blue: #0015BC;
+            --light-blue: #E8F0FF;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--dem-blue);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 21, 188, 0.05), rgba(0, 21, 188, 0.05)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80'); /* Scenic Indiana placeholder */
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: var(--dem-blue); margin-bottom: 10px; }
+        
+        .blurb {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            background-color: var(--light-blue);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--dem-blue);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #000e8c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .disclaimer {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 5px 15px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tipton County Democrats</h1>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <div class="blurb">
+            <p>We are the official Democratic Party of Tipton County, Indiana. We are committed to building a brighter, more equitable future for every neighbor in Tipton, Sharpsville, Kempton, and beyond.</p>
+            <p>Join us as we work together to support local candidates and advocate for progressive policies that strengthen our community.</p>
+        </div>
+
+        <div class="form-section">
+            <h3>Stay Updated</h3>
+            <p>Join our newsletter for local updates and volunteer opportunities.</p>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Join the Movement</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Tipton County Democratic Party</p>
+    <div class="disclaimer">
+        Paid for by the Tipton County Democratic Central Committee
+    </div>
+</footer>
+
+</body>
+</html>
