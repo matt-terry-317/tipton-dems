@@ -26,7 +26,6 @@
 
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
 
-        /* Navigation */
         nav {
             background: var(--white);
             padding: 1rem 5%;
@@ -41,113 +40,119 @@
 
         .logo { font-weight: 700; color: var(--dem-blue); font-size: 1.4rem; text-decoration: none; }
 
-        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 21, 188, 0.8), rgba(0, 21, 188, 0.8)), url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(0, 21, 188, 0.75), rgba(0, 21, 188, 0.75)), url('https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
+            background-position: center;
             color: white;
-            padding: 100px 5%;
+            padding: 120px 5%;
             text-align: center;
         }
 
-        .hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+        .hero h2 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; font-weight: 400; }
 
-        /* Content Sections */
-        .section { padding: 60px 10%; }
+        .section { padding: 80px 10%; }
         .bg-light { background-color: var(--bg-gray); }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
         .card {
             background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border-top: 5px solid var(--dem-blue);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--dem-blue);
         }
 
-        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--dem-blue); margin-bottom: 15px; }
 
-        /* Form Styling */
         .newsletter-box {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
-        input[type="text"], input[type="email"] {
+        input {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            border: 2px solid #eee;
+            border-radius: 4px;
+            font-size: 1rem;
         }
 
         .btn {
             background: var(--dem-blue);
             color: white;
-            padding: 12px 30px;
+            padding: 15px 40px;
             border: none;
-            border-radius: 6px;
-            font-weight: 600;
+            border-radius: 4px;
+            font-weight: 700;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            display: inline-block;
+            text-decoration: none;
         }
 
-        .btn:hover { background: var(--accent-blue); }
+        .btn:hover { background: var(--accent-blue); transform: translateY(-2px); }
 
         footer {
-            background: #1a1a1a;
+            background: #000;
             color: white;
-            padding: 40px 5%;
+            padding: 60px 5%;
             text-align: center;
         }
 
         .disclaimer {
-            border: 1px solid #555;
+            border: 1px solid #fff;
             display: inline-block;
-            padding: 8px 20px;
-            margin-top: 20px;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+            padding: 10px 25px;
+            margin-top: 30px;
+            font-size: 0.75rem;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
-            .hero h2 { font-size: 1.8rem; }
+            .hero h2 { font-size: 2.2rem; }
+            .section { padding: 50px 5%; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#" class="logo">TIPTON DEMS</a>
+    <a href="#" class="logo">TIPTON COUNTY DEMOCRATS</a>
     <div>
-        <button class="btn" style="padding: 8px 15px; font-size: 0.8rem;">Donate</button>
+        <a href="#join" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Volunteer</a>
     </div>
 </nav>
 
 <section class="hero">
-    <h2>Organizing for a Better Tipton County</h2>
-    <p>Empowering our community through data, transparency, and grassroots action. Together, we can build a future that works for everyone.</p>
-    <a href="#join" class="btn">Get Involved</a>
+    <h2>Building a Better, Brighter Tipton County</h2>
+    <p>We believe in a future that is fair, equitable, and filled with opportunity for all Hoosiers. Join us in making progress a reality for every neighbor.</p>
+    <a href="https://indianavoters.in.gov/" target="_blank" class="btn" style="background: #fff; color: var(--dem-blue);">Register to Vote</a>
 </section>
 
 <section class="section">
-    <h2 style="text-align: center;">Our Priorities</h2>
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h2>What We Stand For</h2>
+        <p>The Tipton County Democratic Party is committed to fighting for the values that strengthen our families and our community.</p>
+    </div>
     <div class="grid">
         <div class="card">
-            <h3>Local Empowerment</h3>
-            <p>We believe in giving every resident a voice in our county government, from Tipton to Sharpsville.</p>
+            <h3>Strong Public Schools</h3>
+            <p>Investing in our teachers and students to ensure every child in Tipton County has a world-class education.</p>
         </div>
-        <div class="card">
-            <h3>Data-Driven Growth</h3>
-            <p>Utilizing modern tools and transparent communication to solve local challenges and improve infrastructure.</p>
